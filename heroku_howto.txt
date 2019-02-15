@@ -1,0 +1,23 @@
+echo $0
+echo $PATH
+curl https://cli-assets.heroku.com/install.sh | sh
+heroku --help
+heroku login
+heroku keys:add
+heroku keys
+ssh -v git@heroku.com
+# need to provide the password of the key
+# Enter passphrase for key '/root/.ssh/id_rsa':
+# debug1: Authentication succeeded (publickey).
+echo $PATH
+heroku login
+heroku keys:add
+heroku keys
+git status
+git add .
+git commit -m 'Setup start script and heroku port'
+git push origin
+heroku create
+git push heroku
+heroku open
+
